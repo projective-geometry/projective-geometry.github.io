@@ -1,0 +1,288 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta name="description"
+        content="Shadows Don’t Lie and Lines Can’t Bend! Generative Models don’t know Projective Geometry...for now">
+  <meta name="keywords" content="Nerfies, D-NeRF, NeRF">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Shadows Don’t Lie and Lines Can’t Bend!</title>
+
+  <!-- Global site tag (gtag.js) - Google Analytics -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-PYVRSFMDRL"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+
+    function gtag() {
+      dataLayer.push(arguments);
+    }
+
+    gtag('js', new Date());
+
+    gtag('config', 'G-PYVRSFMDRL');
+  </script>
+
+  <link href="https://fonts.googleapis.com/css?family=Google+Sans|Noto+Sans|Castoro"
+        rel="stylesheet">
+
+  <link rel="stylesheet" href="./static/css/bulma.min.css">
+  <link rel="stylesheet" href="./static/css/bulma-carousel.min.css">
+  <link rel="stylesheet" href="./static/css/bulma-slider.min.css">
+  <link rel="stylesheet" href="./static/css/fontawesome.all.min.css">
+  <link rel="stylesheet"
+        href="https://cdn.jsdelivr.net/gh/jpswalsh/academicons@1/css/academicons.min.css">
+  <link rel="stylesheet" href="./static/css/index.css">
+  <link rel="icon" href="./static/images/favicon_geo.png">
+
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script defer src="./static/js/fontawesome.all.min.js"></script>
+  <script src="./static/js/bulma-carousel.min.js"></script>
+  <script src="./static/js/bulma-slider.min.js"></script>
+  <script src="./static/js/index.js"></script>
+</head>
+<body>
+
+
+<section class="hero">
+  <div class="hero-body">
+    <div class="container is-max-desktop">
+      <div class="columns is-centered">
+        <div class="column has-text-centered">
+          <h1 class="title is-1 publication-title">Shadows Don’t Lie and Lines Can’t Bend!
+            Generative Models don’t know Projective Geometry...for now</h1>
+          
+          <div class="is-size-5 publication-authors">
+            <span class="author-block">
+              <a href="https://www.linkedin.com/in/ayush-sarkar">Ayush Sarkar</a><sup>1*</sup>,
+            </span>
+            <span class="author-block">
+              <a href="https://hanlinmai.web.illinois.edu/">Asher Mai</a><sup>1*</sup>,
+            </span>
+            <span class="author-block">
+              <a href="https://projectivegeometry.github.io/">Amitabh Mahapatra</a><sup>1*</sup>,
+            </span>
+            <span class="author-block">
+              <a href="https://slazebni.cs.illinois.edu/">Svetlana Lazebnik</a><sup>1</sup>,
+            </span>
+            <span class="author-block">
+              <a href="https://luthuli.cs.uiuc.edu/~daf/">David A. Forsyth</a><sup>1</sup>,
+            </span>
+            <span class="author-block">
+              <a href="https://anandbhattad.github.io/">Anand Bhattad</a><sup>2</sup>
+            </span>
+          </div>
+
+          <div class="is-size-6 publication-authors">
+            <span class="author-block"><sup>1</sup>University of Illinois Urbana-Champaign</span>
+            <span class="author-block"><sup>2</sup>Toyota Technological Institute at Chicago</span>
+          </div>
+          
+          <div class="is-size-6 publication-authors">
+            <span class="author-block">* Equally contributing first author</span>
+          </div>
+
+          <div class="column has-text-centered">
+            <div class="publication-links">
+              <!-- PDF Link. -->
+              <span class="link-block">
+                <a href="https://projectivegeometry.github.io/"
+                   class="external-link button is-normal is-rounded is-dark">
+                  <span class="icon">
+                      <i class="fas fa-file-pdf"></i>
+                  </span>
+                  <span>Paper</span>
+                </a>
+              </span>
+              <span class="link-block">
+                <a href="https://projectivegeometry.github.io/"
+                   class="external-link button is-normal is-rounded is-dark">
+                  <span class="icon">
+                      <i class="ai ai-arxiv"></i>
+                  </span>
+                  <span>arXiv</span>
+                </a>
+              </span>
+              <!-- Video Link. -->
+              <span class="link-block">
+                <a href="https://projectivegeometry.github.io/"
+                   class="external-link button is-normal is-rounded is-dark">
+                  <span class="icon">
+                      <i class="fab fa-youtube"></i>
+                  </span>
+                  <span>Video</span>
+                </a>
+              </span>
+              <!-- Code Link. -->
+              <span class="link-block">
+                <a href="https://projectivegeometry.github.io/"
+                   class="external-link button is-normal is-rounded is-dark">
+                  <span class="icon">
+                      <i class="fab fa-github"></i>
+                  </span>
+                  <span>Code</span>
+                  </a>
+              </span>
+              <!-- Dataset Link. -->
+              <span class="link-block">
+                <a href="https://projectivegeometry.github.io/"
+                   class="external-link button is-normal is-rounded is-dark">
+                  <span class="icon">
+                      <i class="far fa-images"></i>
+                  </span>
+                  <span>Data</span>
+                  </a>
+            </div>
+
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="hero teaser">
+  <div class="container is-max-desktop">
+    <div class="hero-body">
+      <img id="teaser" src="./static/images/teaser.jpg" alt="Teaser" style="width: 100%; height: auto;">
+      <h2 class="subtitle has-text-centered">
+        AI-generated images, while visually appealing, often have errors in shadow alignment and vanishing point accuracy. Our model effectively detects these systematic inconsistencies, aiding in the identification of such images.
+      </h2>
+    </div>
+  </div>
+</section>
+
+
+<section class="section">
+  <div class="container is-max-desktop">
+    <!-- Abstract. -->
+    <div class="columns is-centered has-text-centered">
+      <div class="column is-four-fifths">
+        <h2 class="title is-3">Abstract</h2>
+        <div class="content has-text-justified">
+          <p>
+            Generative models can produce impressively realistic images.
+            This paper demonstrates that generated images have geometric
+            features different from those of real images.  We  build a set of
+            collections of generated images, prequalified to fool simple,
+            signal-based classifiers into believing they are real.  We then show
+            that prequalified generated images can be identified reliably by
+            classifiers that only look at geometric properties.  We use three
+            such classifiers.  All three classifiers are denied access to image pixels, and look only at
+            derived geometric features. The first classifier looks at the perspective field of the image,
+            the second looks at lines detected in the image, and the third looks at
+            relations between detected objects and shadows.  Our procedure
+            detects generated images more reliably than SOTA local signal based
+            detectors, for images from a number of distinct generators. Saliency
+            maps suggest that the classifiers can identify geometric problems reliably.
+            We conclude that current generators cannot reliably reproduce
+            geometric properties of real images.
+          </p>
+        </div>
+      </div>
+    </div>
+    <!--/ Abstract. -->
+
+    <!-- Paper video. -->
+    <!--
+    <div class="columns is-centered has-text-centered">
+      <div class="column is-four-fifths">
+        <h2 class="title is-3">Video</h2>
+        <div class="publication-video">
+          <iframe src="https://www.youtube.com/embed/r3v5KRzXUUc"
+        frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
+        </div>
+      </div>
+    </div>
+    -->
+    <!--/ Paper video. -->
+
+    <!-- Paper video. -->
+    <div class="columns is-centered has-text-centered">
+      <div class="column is-four-fifths">
+        <h2 class="title is-3">Explainer Video</h2>
+        <div class="publication-video">
+          <!-- Placeholder for the video -->
+          <p>To be uploaded soon...</p>
+        </div>
+      </div>
+    </div>
+    <!--/ Paper video. -->
+  </div>
+
+
+  <!-- Image Analysis for image1.png -->
+  <div class="columns is-centered has-text-centered">
+    <div class="container is-max-desktop">
+      <h2 class="title is-3">Image Analysis</h2>
+      <div class="image-analysis">
+        <img src="./static/images/image1.png" alt="Detailed Image Analysis" style="width: 100%; height: auto;">
+        <p class="description">
+          The first column displays images generated by Stable Diffusion-XL. In the first row, the cars cast shadows in different directions and Grad-CAM identifies this error as diagnostic;
+          in the second row, two cars in front cast shadows in different directions and Grad-CAM identifies this error as diagnostic;
+          in the third row, Grad-CAM identifies the (very odd) structure of the buildings near the vanishing point as a problem, based on perspective field distortion.
+        </p>
+      </div>
+    </div>
+  </div>
+  <!--/ Image Analysis for image1.png -->
+</section>
+
+
+<section class="section" id="Results">
+  <div class="container is-max-desktop">
+    <div class="columns is-centered has-text-centered">
+      <div class="column is-four-fifths">
+        <h2 class="title is-3">Results</h2>
+        <div class="results-image">
+          <img src="./static/images/results.png" alt="Results" style="width: 100%; height: auto;">
+          <p class="description">
+            ROC Curves Assessing Projective Geometry Cues in AI-Generated images by Stable Diffusion XL. We train distinct models
+            for Indoor Scenes in the top row, Outdoor scenes in the middle row, and Indoor + Outdoor Scenes in the last row. (a): Across the Full
+            Test Set, our Perspective Field classifier and our Line Segment classifier are somewhat more accurate (AUCs of 0.94 and 0.98) than the
+            Prequalifier (AUC of 0.93). Prequalification allows us to check whether these methods might be using signal cues. They are not, as (b) and
+            (c) demonstrate. (b): Results for the Unconfident Test Set (where the Prequalifier has an AUC of 0.47, as it should); note how our classifiers
+            can still reliably identify generated images. (c): Results for the Misclassified Test Set (where the Prequalifier has an AUC of 0.00, as it
+            should); note how our classifiers remain reliable. We conclude that generated indoor images contain geometric structures not seen in real
+            images, and that these structures very reliably identify generated images.
+          </p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+<section class="section" id="BibTeX">
+  <div class="container is-max-desktop content">
+    <h2 class="title">BibTeX</h2>
+    <pre><code>@article{sarkar2023geometry,
+  author    = {Sarkar, Ayush and Mai, Asher and Mahapatra, Amitabh and Forsyth, David and Lazebnik, Svetlana and Bhattad, Anand},
+  title     = {Shadows Don’t Lie and Lines Can’t Bend! Generative Models don’t know Projective Geometry...for now},
+  year      = {2023},
+}</code></pre>
+  </div>
+</section>
+
+
+<footer class="footer">
+  <div class="container">
+    <div class="columns is-centered">
+      <div class="column is-8">
+        <div class="content">
+          <p>
+            This website is licensed under a <a rel="license"
+                                                href="http://creativecommons.org/licenses/by-sa/4.0/">Creative
+            Commons Attribution-ShareAlike 4.0 International License</a>.
+          </p>
+          <p>
+            Website source code referenced from <a
+              href="https://github.com/nerfies/nerfies.github.io">this website</a>.
+          </p>
+        </div>
+      </div>
+    </div>
+  </div>
+</footer>
+
+</body>
+</html>
