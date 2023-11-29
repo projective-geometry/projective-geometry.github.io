@@ -88,14 +88,14 @@
           </div>
           
           <div class="is-size-6 publication-authors">
-            <span class="author-block">*Equally contributing first author</span>
+            <span class="author-block">*Equal contribution</span>
           </div>
 
           <div class="column has-text-centered">
             <div class="publication-links">
               <!-- PDF Link. -->
               <span class="link-block">
-                <a href="https://projective-geometry.github.io/"
+                <a href="https://drive.google.com/file/d/1-u8R5NOK8uMbVHVAEroPK0wjro4XnDCp/"
                    class="external-link button is-normal is-rounded is-dark">
                   <span class="icon">
                       <i class="fas fa-file-pdf"></i>
@@ -113,7 +113,7 @@
                 </a>
               </span>
               <!-- Video Link. -->
-              <span class="link-block">
+              <!-- <span class="link-block">
                 <a href="https://projective-geometry.github.io/"
                    class="external-link button is-normal is-rounded is-dark">
                   <span class="icon">
@@ -121,7 +121,7 @@
                   </span>
                   <span>Video</span>
                 </a>
-              </span>
+              </span> -->
               <!-- Code Link. -->
               <span class="link-block">
                 <a href="https://projective-geometry.github.io/"
@@ -227,18 +227,36 @@
       <h2 class="title is-3" style="margin-bottom: 20px;">Image Analysis</h2>
       <h3 class="title is-4" style="margin-top: 0px;">Outdoor</h3>
       <div class="image-analysis">
-        <img src="./static/images/image1.png" alt="Detailed Image Analysis" style="width: 100%; height: auto;">
+        <img src="./static/images/image1.png" alt="sdxloutdoor" style="width: 100%; height: auto;">
         <p class="description">
-          Grad-CAM reveals key errors in Stable Diffusion-XL images: varied shadow directions in vehicles and structural distortions near vanishing points, highlighting its precision in detecting geometric inconsistencies in AI-generated content.
+          Grad-CAM reveals key errors in <strong>Stable Diffusion-XL</strong> images: varied shadow directions in vehicles and structural distortions near vanishing points, highlighting its precision in detecting geometric inconsistencies in AI-generated content.
         </p>
       </div>
 
       <h3 class="title is-4" style="margin-top: 20px;">Indoor</h3>
       <div class="image-analysis">
-        <img src="./static/images/image2.png" alt="Detailed Image Analysis" style="width: 100%; height: auto;">
+        <img src="./static/images/image2.png" alt="sdxlindoor" style="width: 100%; height: auto;">
         <p class="description"">
-          Grad-CAM analysis on Stable Diffusion-XL's indoor scenes exposes geometric flaws: original images show object-shadow mismatches, while Grad-CAM highlights synthetic indicators like misdirected shadows from furniture. 
+          Grad-CAM analysis on <strong>Stable Diffusion-XL</strong>'s indoor scenes exposes geometric flaws: original images show object-shadow mismatches, while Grad-CAM highlights synthetic indicators like misdirected shadows from furniture. 
             Further, it identifies anomalies in Perspective Fields, such as misaligned lines and cupboard top discrepancies, affirming our model's accuracy in detecting AI-generated image errors.
+        </p>
+      </div>
+
+      <h3 class="title is-4" style="margin-top: 20px;">DALL-E 3</h3>
+      <div class="image-analysis">
+        <img src="./static/images/dalle.png" alt="dalle" style="width: 100%; height: auto;">
+        <p class="description"">
+          DALL-E 3 generated interior scenes analyzed using Object-Shadow and Perspective Fields cues, with GradCam visualizations. 
+          Object-Shadow GradCam identifies mismatched shadow directions and lengths, while Perspective Fields GradCam reveals inaccuracies in line alignment and vanishing points in room geometry.
+        </p>
+      </div>
+
+      <h3 class="title is-4" style="margin-top: 20px;">Adobe Firefly</h3>
+      <div class="image-analysis">
+        <img src="./static/images/firefly.png" alt="firefly" style="width: 100%; height: auto;">
+        <p class="description"">
+          Adobe Firefly's street scenes reveal projective geometry inconsistencies, analyzed using Object-Shadow and Perspective Fields. 
+          Object-Shadow GradCam highlights mismatched shadow directions and lengths, while Perspective Fields GradCam detects line inconsistencies near vanishing points and in scene depth, particularly in road markings and building facades.
         </p>
       </div>
     </div>
